@@ -1,0 +1,125 @@
+.boards {
+  max-width: 1411px;
+  margin: 0 auto;
+  padding: 316px 0 278px;
+
+  @media (max-width: $desktop-width-max) {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 88px 1fr 252px;
+  }
+
+  @media (max-width: $desktop-width) {
+    padding: 188px 0 163px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 279px 0 69px;
+    grid-template-columns: 18px 1fr 15px;
+  }
+
+  h1 {
+    margin: 0;
+    font-family: $font-roboto-condensed;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 94px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: $white;
+
+    @media (max-width: $desktop-width-max) {
+      grid-column: 2 / -2;
+    }
+
+    @media (max-width: $desktop-width) {
+      font-size: 60px;
+      line-height: 70px;
+    }
+
+    @media (max-width: $tablet-width) {
+      font-size: 40px;
+      line-height: 47px;
+    }
+  }
+
+  p {
+    max-width: 718px;
+    margin: 31px 0 37px;
+    display: flex;
+    font-family: $font-pt-mono;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 34px;
+    color: $white;
+
+    @media (max-width: $desktop-width-max) {
+      grid-column: 2 / -2;
+    }
+
+    @media (max-width: $desktop-width) {
+      font-size: 18px;
+      line-height: 156.8%;
+    }
+
+    @media (max-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 156.8%;
+    }
+
+    @media (max-width: $tablet-width) {
+      margin: 30px 0 42px;
+    }
+
+    &::before {
+      width: 89px;
+      height: 2px;
+      margin: 15px 28px 0 0;
+      content: "";
+      display: block;
+      background: $white;
+      grid-column: 2 / -2;
+
+      @media (max-width: $desktop-width-max) {
+        width: 48px;
+        margin: 15px 15px 0 0;
+      }
+    }
+  }
+}
+
+.boards__link {
+  width: 407px;
+  height: 55px;
+  margin-left: 94px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: $blue;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: $font-roboto-condensed;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $white;
+  z-index: 15;
+
+  @media (max-width: $desktop-width-max) {
+    width: 379px;
+    margin-left: 48px;
+    grid-column: 2 / -2;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    margin: 0;
+
+    span {
+      display: none;
+    }
+  }
+}

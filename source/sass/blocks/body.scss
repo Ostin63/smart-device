@@ -1,9 +1,50 @@
 .body {
   height: 100%;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-family: $font-open-sans;
-  background: $white;
+  display: grid;
+  grid-template-rows: 878px max-content;
+  background-image: url("../img/bg-header.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: auto 878px;
+
+  @media (max-width: $desktop-width-max) {
+    background-position: 50% 0;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    background-image: url("../img/bg-header-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: auto 686px;
+  }
+
+  @media (max-width: $tablet-width) {
+    grid-template-rows: 644px max-content;
+    background-position: 100% 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/bg-header-modal.png");
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: auto 644px;
+  }
+}
+
+.body__header {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+  z-index: 10;
+}
+
+.body__main {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+  align-self: -1px;
+}
+
+.footer {
+  grid-row: -2 / -1;
+  grid-column: 1 / -1;
 }
