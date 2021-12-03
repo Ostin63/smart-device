@@ -1,0 +1,15 @@
+.adge-company {
+  width: 100%;
+  display: block;
+  background-image: url("../img/bg-edge.svg");
+  background-position: 54% 80%;
+  background-repeat: no-repeat;
+  background-size: 872px 873px;
+
+  @media (max-width: $desktop-width) {
+    background-image: url("../img/bg-edge-tablet.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 559px 873px;
+  }
+}

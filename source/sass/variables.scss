@@ -2,6 +2,7 @@ $mobile-width: 320px;
 $tablet-width: 767px;
 $tablet-width-only: 768px;
 $desktop-width: 1023px;
+$desktop-width-only: 1200px;
 $desktop-width-max: 1443px;
 
 $font-pt-mono: "pt-mono", "Arial", sans-serif;
@@ -12,6 +13,7 @@ $white: #ffffff;
 $white-00: rgba(#ffffff, 0);
 $gray: #788891;
 $gray-20: rgba(#626962, 0.2);
+$gray-border: #ebebeb;
 $gray-ligth: #e5e5e5;
 $gray-dark: #353735;
 $gray-text: #666666;
@@ -21,3 +23,6 @@ $blue: #00b2ff;
 
 $border-white-1: 1px solid $white;
 $border-gray-20: 1px solid $gray-20;
+$border-gray-1: 1px solid $gray-border;
+$border-blue: 3px solid $blue;
+$border-blue-3: 1px solid $blue;

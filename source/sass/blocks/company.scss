@@ -1,0 +1,77 @@
+.company {
+  padding: 40px 0 110px;
+  display: grid;
+  grid-template-columns: 25px 1fr 25px;
+}
+
+.company__wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  grid-column: 2 / -2;
+}
+
+.company__block-namber {
+  position: absolute;
+  width: 318px;
+  height: 115px;
+  top: 130px;
+  left: -100px;
+  transform: rotate(-90deg);
+
+  p {
+    margin: 0;
+    font-family: $font-roboto-condensed;
+    font-weight: bold;
+    font-size: 156.248px;
+    line-height: 115px;
+    background-image: url("../img/img-mask-data.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-clip: text;
+    color: rgba(0, 0, 0, 0);
+  }
+}
+
+.company__wrapper-text {
+  margin-left: 180px;
+
+  h2 {
+    font-family: $font-roboto-condensed;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 51px;
+    color: $gray-text;
+    grid-column: 2 / -2;
+  }
+
+  p {
+    font-family: $font-pt-mono;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: $gray-text;
+    grid-column: 2 / -2;
+  }
+
+  a {
+    width: 180px;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-family: $font-roboto-condensed;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $blue;
+    border: $border-blue-3;
+    border-radius: 5px
+  }
+}
