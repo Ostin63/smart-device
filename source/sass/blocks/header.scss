@@ -1,11 +1,13 @@
 .header {
+  position: absolute;
+  width: 100%;
   background: $white-00;
 }
 
 .header__top-menu {
-  width: 1411px;
+  width: 1425px;
   margin: 0 auto;
-  padding: 33px 0 20px;
+  padding: 34px 0 20px 14px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -14,6 +16,10 @@
     width: 100%;
     display: grid;
     grid-template-columns: 25px max-content 1fr max-content 25px;
+  }
+
+  @media (max-width: $desktop-width) {
+    padding: 20px 0 20px 0px;
   }
 
   @media (max-width: $tablet-width) {
@@ -45,7 +51,7 @@
 
 .header__logo-text {
   p {
-    margin: 0;
+    margin: 5px 0 0;
     font-family: $font-roboto-condensed;
     font-weight: bold;
     font-size: 25px;
@@ -101,6 +107,10 @@
     margin-right: 33px;
   }
 
+  @media (max-width: $tablet-width) {
+    margin-right: 23px;
+  }
+
   p {
     margin: 0;
     font-family: $font-pt-mono;
@@ -116,6 +126,8 @@
 }
 
 .header__contacts-phone {
+  margin-right: 38px;
+
   svg {
     width: 18px;
     height: 18px;

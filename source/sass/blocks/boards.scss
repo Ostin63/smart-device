@@ -1,7 +1,36 @@
 .boards {
+  background-image: url("../img/bg-header.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: auto 100%;
+
+  @media (max-width: $desktop-width-max) {
+    background-position: 50% 0;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    background-image: url("../img/bg-header-tablet.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+  }
+
+  @media (max-width: $tablet-width) {
+    background-position: 100% 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/bg-header-modal.png");
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: auto 100%;
+  }
+}
+
+.boards__wrapper {
   max-width: 1411px;
   margin: 0 auto;
-  padding: 316px 0 278px;
+  padding: 315px 0 278px;
 
   @media (max-width: $desktop-width-max) {
     width: 100%;
@@ -14,9 +43,10 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 279px 0 69px;
-    grid-template-columns: 18px 1fr 15px;
+    padding: 286px 0 69px;
+    grid-template-columns: 15px 1fr 15px;
   }
+
 
   h1 {
     margin: 0;
@@ -45,7 +75,7 @@
 
   p {
     max-width: 718px;
-    margin: 31px 0 37px;
+    margin: 27px 0 44px 6px;
     display: flex;
     font-family: $font-pt-mono;
     font-weight: normal;
@@ -58,31 +88,34 @@
     }
 
     @media (max-width: $desktop-width) {
+      margin: 30px 0 54px 3px;
       font-size: 18px;
       line-height: 156.8%;
     }
 
     @media (max-width: $tablet-width) {
+      margin: 30px 0 37px;
       font-size: 16px;
       line-height: 156.8%;
     }
 
-    @media (max-width: $tablet-width) {
-      margin: 30px 0 42px;
-    }
-
     &::before {
-      width: 89px;
+      width: 90px;
       height: 2px;
-      margin: 15px 28px 0 0;
+      margin: 17px 28px 0 0;
       content: "";
       display: block;
       background: $white;
       grid-column: 2 / -2;
 
       @media (max-width: $desktop-width-max) {
-        width: 48px;
+        width: 57px;
         margin: 15px 15px 0 0;
+      }
+
+      @media (max-width: $tablet-width) {
+        width: 81px;
+        margin: 12px 15px 0 3px;
       }
     }
   }
@@ -91,7 +124,7 @@
 .boards__link {
   width: 407px;
   height: 55px;
-  margin-left: 94px;
+  margin-left: 101px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -110,13 +143,13 @@
 
   @media (max-width: $desktop-width-max) {
     width: 379px;
-    margin-left: 48px;
+    margin-left: 51px;
     grid-column: 2 / -2;
   }
 
   @media (max-width: $tablet-width) {
     width: 100%;
-    margin: 0;
+    margin-left: 0;
 
     span {
       display: none;
