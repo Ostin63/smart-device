@@ -15,9 +15,9 @@
 
 .company__block-namber {
   position: absolute;
-  width: 318px;
+  width: 317px;
   height: 115px;
-  top: 130px;
+  top: 100px;
   left: -100px;
   transform: rotate(-90deg);
 
@@ -33,21 +33,41 @@
     background-clip: text;
     color: rgba(0, 0, 0, 0);
   }
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .company__wrapper-text {
   margin-left: 180px;
 
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+  }
+
   h2 {
+    margin: 0;
     font-family: $font-roboto-condensed;
     font-weight: normal;
     font-size: 36px;
     line-height: 51px;
     color: $gray-text;
     grid-column: 2 / -2;
+
+    @media (max-width: $desktop-width) {
+      font-size: 32px;
+      line-height: 140.62%;
+    }
+
+    @media (max-width: $tablet-width) {
+      font-size: 28px;
+      line-height: 140.62%;
+    }
   }
 
   p {
+    margin: 20px 0 0;
     font-family: $font-pt-mono;
     font-weight: normal;
     font-size: 16px;
@@ -59,6 +79,7 @@
   a {
     width: 180px;
     height: 45px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -71,7 +92,15 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: $blue;
+    background: $white;
     border: $border-blue-3;
-    border-radius: 5px
+    border-radius: 5px;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background: $blue;
+      opacity: 0.7;
+    }
   }
 }

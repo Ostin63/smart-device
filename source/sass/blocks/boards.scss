@@ -151,7 +151,26 @@
     width: 100%;
     margin-left: 0;
 
-    span {
+  }
+
+  &:hover,
+  &:focus {
+    color: $blue;
+    background: $white;
+  }
+}
+
+.boards__link-text {
+  &--min {
+    display: none;
+
+    @media (max-width: $tablet-width) {
+      display: block;
+    }
+  }
+
+  &--big {
+    @media (max-width: $tablet-width) {
       display: none;
     }
   }

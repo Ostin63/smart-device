@@ -1,15 +1,22 @@
 .adge-company {
   width: 100%;
   display: block;
-  background-image: url("../img/bg-edge.svg");
-  background-position: 54% 80%;
+  background-image: url("../img/bg-adge-company.svg");
+  background-position: 45% 25%;
   background-repeat: no-repeat;
-  background-size: 872px 873px;
+  background-size: auto 1347px;
 
   @media (max-width: $desktop-width) {
     background-image: url("../img/bg-edge-tablet.svg");
-    background-position: 50% 50%;
+    background-position: 100% 40%;
     background-repeat: no-repeat;
     background-size: 559px 873px;
+  }
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/bg-edge-modal.svg");
+    background-position: 100% 40%;
+    background-repeat: no-repeat;
+    background-size: 320px 873px;
   }
 }

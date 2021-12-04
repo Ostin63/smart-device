@@ -9,6 +9,7 @@
 
   @media (max-width: $tablet-width) {
     padding: 35px 0;
+    grid-template-columns: 14px 1fr 16px;
   }
 }
 
@@ -21,6 +22,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   grid-column: 2 / -2;
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .edge__item {
@@ -39,6 +44,11 @@
     font-size: 24px;
     line-height: 34px;
     color: $blue;
+
+    @media (max-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 140.62%;
+    }
   }
 
   p {
@@ -59,7 +69,6 @@
   }
 
   &:hover {
-    border: none;
     background: $blue;
 
     h3,
