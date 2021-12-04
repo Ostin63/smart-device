@@ -2,9 +2,11 @@
   height: 100%;
   scroll-behavior: smooth;
 
-  @media (max-width: $desktop-width) {
-    &--active {
-      overflow: hidden;
+  &--active {
+    overflow: hidden;
+
+    @media (max-width: $desktop-width) {
+      overflow: visible;
     }
   }
 }

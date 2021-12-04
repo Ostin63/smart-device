@@ -50,7 +50,7 @@
       <div class="boards__wrapper">
         <h1>Печатные платы</h1>
         <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="boards__link">
+        <a class="boards__link" href="#feedback">
           <span class="boards__link-text boards__link-text--big">Получить бесплатную консультацию</span>
           <span class="boards__link-text boards__link-text--min">Бесплатная консультация</span>
         </a>
@@ -172,7 +172,7 @@
         </li>
       </ul>
     </section>
-    <section class="feedback">
+    <section class="feedback" id="feedback">
       <h2>Остались вопросы? Задайте их нам!</h2>
       <p>Мы проконсультируем Вас бесплатно</p>
       <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
@@ -193,7 +193,7 @@
         <div class="feedback__bottom-block">
           <button class="feedback__submit" type="submit">Задать вопрос</button>
           <div class="feedback__wrapper-checkbox">
-            <input class="visually-hidden" type="checkbox" id="checkbox" name="sweetener" checked="">
+            <input class="visually-hidden" type="checkbox" id="checkbox" name="sweetener" checked="" required="">
             <label for="checkbox">Я согласен на обработку персональных данных</label>
           </div>
         </div>
@@ -296,7 +296,38 @@
 
   </footer>
 
-  <!-- <script src="js/script.js"></script> -->
+  <div class="modal">
+    <div class="modal__wrapper">
+      <h2>Закажите звонок</h2>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <div class="modal__close">
+        <span class="visually-hidden">Закрыть окно</span>
+      </div>
+      <form class="modal__feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="modal__block-input">
+          <div class="modal__wrapper-input">
+            <label for="name"></label>
+            <input type="text" id="name" name="name" placeholder="Имя" required="">
+          </div>
+          <div class="modal__wrapper-input">
+            <label for="iphone"></label>
+            <input type="tel" id="iphone" placeholder="Телефон" name="phone" required="">
+          </div>
+          <div class="modal__wrapper-textarea">
+            <label for="itextarea"></label>
+            <textarea id="itextarea" name="textarea" cols="30" rows="4" placeholder="Ваш вопрос"></textarea>
+          </div>
+        </div>
+        <button class="modal__submit" type="submit">Отправить</button>
+        <div class="modal__wrapper-checkbox">
+          <input class="visually-hidden" type="checkbox" id="modal-checkbox" name="sweetener" checked="" required="">
+          <label for="modal-checkbox">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
