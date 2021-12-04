@@ -172,7 +172,33 @@
         </li>
       </ul>
     </section>
-
+    <section class="feedback">
+      <h2>Остались вопросы? Задайте их нам!</h2>
+      <p>Мы проконсультируем Вас бесплатно</p>
+      <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="feedback__block-input">
+          <div class="feedback__wrapper-input">
+            <label for="fullName"></label>
+            <input type="text" id="fullName" name="fullName" placeholder="Имя" required="">
+          </div>
+          <div class="feedback__wrapper-input">
+            <label for="phone"></label>
+            <input type="tel" id="phone" placeholder="Телефон" name="phone" required="">
+          </div>
+          <div class="feedback__wrapper-textarea">
+            <label for="textarea"></label>
+            <textarea id="textarea" name="textarea" cols="30" rows="5" placeholder="Ваш вопрос"></textarea>
+          </div>
+        </div>
+        <div class="feedback__bottom-block">
+          <button class="feedback__submit" type="submit">Задать вопрос</button>
+          <div class="feedback__wrapper-checkbox">
+            <input class="visually-hidden" type="checkbox" id="checkbox" name="sweetener" checked="">
+            <label for="checkbox">Я согласен на обработку персональных данных</label>
+          </div>
+        </div>
+      </form>
+    </section>
   </main>
 
   <footer class="footer">

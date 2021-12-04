@@ -158,6 +158,10 @@
     color: $blue;
     background: $white;
   }
+
+  &:active {
+    opacity: 0.9;
+  }
 }
 
 .boards__link-text {

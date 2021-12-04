@@ -32,6 +32,15 @@
   display: flex;
   text-decoration: none;
 
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   svg {
     width: 52px;
     height: 52px;
@@ -90,6 +99,15 @@
   align-items: center;
   text-decoration: none;
 
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   svg {
     width: 19px;
     height: 14px;
@@ -127,6 +145,15 @@
 
 .header__contacts-phone {
   margin-right: 38px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   svg {
     width: 18px;
@@ -168,6 +195,10 @@
   &:hover,
   &:focus {
     opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @media (max-width: $desktop-width) {
