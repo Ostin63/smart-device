@@ -13,7 +13,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding-bottom: 64px;
+    padding: 50px 0 35px;
     grid-template-columns: 15px 1fr 15px;
   }
 
@@ -36,8 +36,8 @@
 
     @media (max-width: $tablet-width) {
       width: 100%;
+      padding: 0 0 0 10px;
       font-size: 28px;
-      line-height: 140.62%;
     }
   }
 }
@@ -64,6 +64,7 @@
   }
 
   @media (max-width: $tablet-width) {
+    margin-top: 40px;
     display: block;
   }
 }
@@ -93,6 +94,11 @@
 
   @media (max-width: $desktop-width) {
     grid-template-rows: 43px 60px 153px;
+  }
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 35px min-content;
+    grid-template-rows: 20px 60px 176px;
   }
 
   p {

@@ -155,10 +155,22 @@
   }
 }
 
-.company__text-min {
+.company__text-tablet {
   display: none;
 
   @media (max-width: $desktop-width) {
+    display: block;
+  }
+
+  @media (max-width: $tablet-width){
+    display: none;
+  }
+}
+
+.company__text-modal {
+  display: none;
+
+  @media (max-width: $tablet-width) {
     display: block;
   }
 }
