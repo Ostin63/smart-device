@@ -1,14 +1,12 @@
 .modal {
   position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  width: 490px;
+  padding: 30px 39px 36px;
+  left: calc(50% - 490px/2);
+  top: 136px;
   display: none;
-  text-align: center;
-  vertical-align: middle;
-  background-color: $black-10;
-  z-index: 1100;
+  background-color: $blue;
+  z-index: 1500;
 
   &--active {
     display: block;
@@ -17,15 +15,6 @@
       display: none;
     }
   }
-}
-
-.modal__wrapper {
-  position: relative;
-  width: 490px;
-  margin-left: calc(50% - 490px/2);
-  margin-top: 136px;
-  padding: 30px 39px 36px;
-  background-color: $blue;
 
   h2 {
     margin: 0;
