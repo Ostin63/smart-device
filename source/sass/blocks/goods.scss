@@ -1,5 +1,5 @@
 .goods {
-  padding: 90px 0 130px;
+  padding: 90px 0 127px;
   display: grid;
   grid-template-columns: 1fr 1170px 1fr;
   background: $black;
@@ -9,7 +9,7 @@
   }
 
   @media (max-width: $desktop-width) {
-    padding: 53px 0 78px;
+    padding: 53px 0 32px;
   }
 
   @media (max-width: $tablet-width) {
@@ -27,8 +27,9 @@
     grid-column: 2 / -2;
 
     @media (max-width: $desktop-width) {
-      width: 715px;
+      width: 100%;
       margin: 0 auto;
+      padding-right: 85px;
       font-size: 32px;
       line-height: 140.62%;
     }
@@ -42,7 +43,7 @@
 }
 
 .goods__list {
-  margin: 47px 0 0;
+  margin: 50px 0 0;
   padding-left: 0;
   list-style: none;
   display: grid;
@@ -50,24 +51,45 @@
   gap: 0 30px;
   grid-column: 2 / -2;
 
-  @media (max-width: $desktop-width-max) {
+  @media (max-width: $desktop-width-only) {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 0;
+  }
+
+  @media (max-width: $desktop-width) {
+    margin-top: 46px;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: block;
   }
 }
 
 .goods__item {
   display: block;
+
+  @media (max-width: $desktop-width-only) {
+    margin: 0 30px 46px 30px;
+  }
+
+  @media (max-width: $desktop-width) {
+    margin: 0 auto 46px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 290px;
+    margin: 0 auto 30px;
+  }
 }
 
 .goods__link {
   text-decoration: none;
   display: grid;
   grid-template-columns: 44px min-content;
-  grid-template-rows: 53px 60px 507px;
+  grid-template-rows: 50px 60px 510px;
 
   @media (max-width: $desktop-width) {
     grid-template-rows: 43px 60px 153px;

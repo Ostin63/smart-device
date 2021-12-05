@@ -31,7 +31,7 @@
 .footer__block-top {
   max-width: 1412px;
   margin: 0 auto;
-  padding-bottom: 67px;
+  padding-bottom: 57px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -47,27 +47,6 @@
 }
 
 .footer__block-logo {
-  p {
-    display: none;
-
-    @media (max-width: $desktop-width) {
-      margin: 0;
-      display: block;
-      font-family: $font-pt-mono;
-      font-weight: normal;
-      font-size: 13px;
-      line-height: 24px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: $black;
-      opacity: 0.5;
-    }
-
-    @media (max-width: $tablet-width) {
-      margin: 26px 0 30px;
-    }
-  }
-
   @media (max-width: $desktop-width) {
     width: 100%;
     padding: 0 10px 25px 25px;
@@ -114,6 +93,27 @@
   }
 }
 
+.footer__top-service {
+  display: none;
+
+  @media (max-width: $desktop-width) {
+    margin: 0 0 0 28px;
+    display: block;
+    font-family: $font-pt-mono;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $black;
+    opacity: 0.5;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 26px 0 30px;
+  }
+}
+
 .footer__social {
   margin: 53px 0 0;
   padding-left: 0;
@@ -155,6 +155,7 @@
   flex-wrap: wrap;
 
   @media (max-width: $desktop-width) {
+    margin-right: 10px;
     padding: 38px 25px 33px;
     justify-content: space-between;
   }
@@ -183,22 +184,22 @@
 
       &::after {
         width: 16px;
-        height: 1px;
+        height: 16px;
         content: "";
         display: block;
-        background-image: url("../img/icon-minus.svg");
+        background-image: url("../img/icon-plus.svg");
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: cover;
       }
 
-      &.active {
+      &--active {
         &::after {
           width: 16px;
-          height: 16px;
+          height: 1px;
           content: "";
           display: block;
-          background-image: url("../img/icon-plus.svg");
+          background-image: url("../img/icon-minus.svg");
           background-repeat: no-repeat;
           background-position: 50% 50%;
           background-size: cover;
@@ -211,7 +212,27 @@
     width: 100%;
     padding: 28px 15px 28px 17px;
     border-bottom: $border-gray-20;
+    cursor: pointer;
+
+    &--active {
+      h3::after {
+        width: 16px;
+        height: 1px;
+        content: "";
+        display: block;
+        background-image: url("../img/icon-minus.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+      }
+
+      .footer__sections-site-list,
+      .footer__contacts-list {
+        display: block;
+      }
+    }
   }
+
 }
 
 .footer__sections-site-list {
@@ -224,26 +245,25 @@
 
 .footer__sections-site-list,
 .footer__contacts-list {
-  margin: 29px 0 0 0;
+  margin: 26px 0 0 0;
   padding-left: 0;
   list-style: none;
 
   @media (max-width: $tablet-width) {
     display: none;
-
-    &--active {
-      display: block;
-    }
   }
 }
 
+.footer__sections-site {
+  margin-right: 54px;
+}
+
 .footer__contacts-list {
-  margin-top: 29px;
   margin-right: 0;
 }
 
 .footer__sections-site-item {
-  margin-right: 65px;
+  margin-right: 60px;
 
   a {
     display: block;
@@ -277,13 +297,12 @@
 
 .footer__block-bottom {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   grid-column: 2 / -2;
   grid-row: -2 / -1;
 
   p {
-    margin: 14px 0;
+    margin-top: 14px;
     font-family: $font-pt-mono;
     font-weight: normal;
     font-size: 13px;
@@ -300,6 +319,11 @@
 
   @media (max-width: $desktop-width-max) {
     margin: 0 25px;
+    justify-content: space-between;
+  }
+
+  @media (max-width: $desktop-width) {
+    margin: 0;
   }
 
   @media (max-width: $tablet-width) {
@@ -319,6 +343,20 @@
 }
 
 .footer__text {
+  &--bottom-service {
+    margin-left: 72px;
+    margin-right: 141px;
+  }
+
+  &--privacy {
+    margin-right: auto;
+  }
+
+  @media (max-width: $desktop-width-only) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
   @media (max-width: $desktop-width) {
     &--protected {
       display: none;

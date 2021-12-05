@@ -28,7 +28,7 @@
 }
 
 .boards__wrapper {
-  max-width: 1411px;
+  max-width: 1425px;
   margin: 0 auto;
   padding: 315px 0 278px;
 
@@ -43,7 +43,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 286px 0 69px;
+    padding: 286px 0 70px;
     grid-template-columns: 15px 1fr 15px;
   }
 

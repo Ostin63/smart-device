@@ -1,7 +1,16 @@
 .company {
-  padding: 40px 0 110px;
+  padding: 36px 0 109px;
   display: grid;
   grid-template-columns: 25px 1fr 25px;
+
+  @media (max-width: $desktop-width) {
+    padding: 6px 0 85px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 18px 0 64px;
+    grid-template-columns: 17px 1fr 10px;
+  }
 }
 
 .company__wrapper {
@@ -17,9 +26,16 @@
   position: absolute;
   width: 317px;
   height: 115px;
-  top: 100px;
-  left: -100px;
+  top: 105px;
+  left: -98px;
   transform: rotate(-90deg);
+
+  @media (max-width: $desktop-width) {
+    width: 362px;
+    height: 251px;
+    top: 54px;
+    left: -111px;
+  }
 
   p {
     margin: 0;
@@ -32,6 +48,15 @@
     background-position: 50% 50%;
     background-clip: text;
     color: rgba(0, 0, 0, 0);
+
+    @media (max-width: $desktop-width) {
+      font-size: 178.324px;
+      line-height: 251px;
+      background-image: url("../img/img-mask-data-tablet.jpg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-clip: text;
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -41,6 +66,12 @@
 
 .company__wrapper-text {
   margin-left: 180px;
+  padding-right: 10px;
+
+  @media (max-width: $desktop-width) {
+    margin-left: 186px;
+    padding-right: 0px;
+  }
 
   @media (max-width: $tablet-width) {
     margin-left: 0;
@@ -56,11 +87,14 @@
     grid-column: 2 / -2;
 
     @media (max-width: $desktop-width) {
+      margin-bottom: 24px;
       font-size: 32px;
       line-height: 140.62%;
     }
 
     @media (max-width: $tablet-width) {
+      margin-left: -3px;
+      margin-bottom: 20px;
       font-size: 28px;
       line-height: 140.62%;
     }
@@ -74,6 +108,10 @@
     line-height: 22px;
     color: $gray-text;
     grid-column: 2 / -2;
+
+    @media (max-width: $tablet-width) {
+      margin: 0 0 40px 0;
+    }
   }
 
   a {
@@ -96,11 +134,31 @@
     border: $border-blue-3;
     border-radius: 5px;
 
+    @media (max-width: $tablet-width) {
+      margin-top: -10px;
+    }
+
     &:hover,
     &:focus {
       color: $white;
       background: $blue;
       opacity: 0.7;
     }
+  }
+}
+
+.company__text-max {
+  display: block;
+
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.company__text-min {
+  display: none;
+
+  @media (max-width: $desktop-width) {
+    display: block;
   }
 }

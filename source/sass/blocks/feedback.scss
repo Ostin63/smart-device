@@ -1,11 +1,11 @@
 .feedback {
-  padding: 96px 0 113px;
+  padding: 91px 0 111px;
   display: grid;
   grid-template-columns: 1fr 600px 570px 1fr;
   background-color: $blue;
   background-image: url("../img/bg-form.png");
   background-repeat: no-repeat;
-  background-position: 100% 50%;
+  background-position: 100% 62%;
   background-size: auto 765px;
 
   @media (max-width: $desktop-width-only) {
@@ -13,8 +13,8 @@
   }
 
   @media (max-width: $desktop-width) {
-    padding: 83px 0 103px;
-    grid-template-columns: 92px 1fr 87px;
+    padding: 80px 0 103px;
+    grid-template-columns: 90px 1fr 87px;
     background-image: none;
   }
 
@@ -38,13 +38,20 @@
       margin: 0 auto;
     }
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: $desktop-width) {
       width: 100%;
+      margin: 0 auto;
+      font-size: 32px;
+      line-height: 140.62%;
     }
+
+    // @media (max-width: $tablet-width) {
+    //   width: 100%;
+    // }
   }
 
   p {
-    margin: 7px 0 0;
+    margin: 10px 0 0;
     font-family: $font-pt-mono;
     font-weight: normal;
     font-size: 16px;
@@ -57,17 +64,22 @@
       margin: 0 auto;
     }
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: $desktop-width) {
       width: 100%;
+      margin: 16px 0 0 3px;
     }
   }
 }
 
 .feedback__form {
   width: 570px;
-  margin: 0 auto;
-  margin-top: 49px;
+  margin: 49px auto 0;
   grid-column: -3 / -2;
+
+  @media (max-width: $desktop-width) {
+    width: 590px;
+    margin-top: 55px;
+  }
 
   @media (max-width: $tablet-width) {
     width: 100%;
@@ -106,6 +118,12 @@
     margin-bottom: 40px;
     padding: 0 16px;
 
+    @media (max-width: $desktop-width) {
+      width: 280px;
+      margin-bottom: 42px;
+      padding: 0 18px;
+    }
+
     @media (max-width: $tablet-width) {
       width: 100%;
     }
@@ -117,6 +135,11 @@
     width: 570px;
     height: 154px;
     padding: 13px 16px 0;
+
+    @media (max-width: $desktop-width) {
+      width: 591px;
+      height: 160px;
+    }
 
     @media (max-width: $tablet-width) {
       width: 100%;
@@ -137,7 +160,6 @@
 .feedback__submit {
   width: 270px;
   height: 45px;
-  margin-right: 38px;
   font-family: $font-roboto-condensed;
   font-weight: bold;
   font-size: 14px;
@@ -159,6 +181,10 @@
     opacity: 0.9;
   }
 
+  @media (max-width: $desktop-width) {
+    width: 280px;
+  }
+
   @media (max-width: $tablet-width) {
     width: 100%;
     margin-right: 0;
@@ -166,6 +192,8 @@
 }
 
 .feedback__wrapper-checkbox {
+  width: 270px;
+  padding-left: 38px;
   font-family: $font-pt-mono;
   font-weight: normal;
   font-size: 14px;
@@ -178,6 +206,10 @@
     padding-left: 32px;
     display: block;
 
+    @media (max-width: $desktop-width) {
+      padding-left: 36px;
+    }
+
     &::before {
       position: absolute;
       width: 16px;
@@ -187,12 +219,20 @@
       left: 0;
       background: url("../img/icon-checkbox-off.svg") 50% 50% no-repeat;
       background-size: cover;
+
+      @media (max-width: $desktop-width) {
+        left: 4px;
+      }
     }
   }
 
-  input:checked + label::before {
+  input:checked+label::before {
     background: url("../img/icon-checkbox-on.svg") 50% 50% no-repeat;
     background-size: cover;
+  }
+
+  @media (max-width: $desktop-width) {
+    width: 280px;
   }
 
   @media (max-width: $tablet-width) {
