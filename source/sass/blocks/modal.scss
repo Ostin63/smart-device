@@ -78,9 +78,19 @@
     border: none;
     background: $white-10;
     color: $white;
+    outline: none;
 
     &::placeholder {
       color: $white;
+    }
+
+    &:hover {
+      background: $white-30;
+    }
+
+    &:focus,
+    &:focus-visible {
+      box-shadow: $shadow;
     }
   }
 

@@ -112,30 +112,47 @@
     border: none;
     background: $white-10;
     color: $white;
+    outline: none;
 
     &::placeholder {
       color: $white;
+    }
+
+    &:hover {
+      background: $white-30;
+    }
+
+    &:focus,
+    &:focus-visible {
+      box-shadow: $shadow;
     }
   }
 }
 
 .feedback__wrapper-input {
+  margin-bottom: 40px;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 42px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 31px;
+  }
+
   input {
     width: 270px;
     height: 50px;
-    margin-bottom: 40px;
     padding: 0 16px;
 
     @media (max-width: $desktop-width) {
       width: 280px;
-      margin-bottom: 42px;
       padding: 0 18px;
     }
 
     @media (max-width: $tablet-width) {
       width: 100%;
       height: 51px;
-      margin-bottom: 31px;
     }
   }
 }
