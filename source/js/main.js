@@ -10,18 +10,40 @@ var modalClose = modal.querySelector('.modal__close');
 var overLay = body.querySelector('.modal-overlay');
 var sectionsSite = body.querySelector('.footer__sections-site');
 var contacts = body.querySelector('.footer__contacts');
-var inputTels = document.querySelectorAll('input[type=tel]');
+var modalForm = modal.querySelector('.modal__feedback-form');
+var fullName = modalForm.querySelector('input[name=fullName]');
+var telfields = body.querySelectorAll('input[type=tel]');
+var modalTelfield = modalForm.querySelector('input[type=tel]');
+var modalTextarea = modalForm.querySelector('#modalTextarea');
 
-for (var i = 0; i < inputTels.length; i++) {
-  new IMask(inputTels[i], {
+var isStorageSupport = true;
+var storage = '';
+
+try {
+  storage = localStorage.getItem('fullName');
+  storage = localStorage.getItem('modalTelfield');
+  storage = localStorage.getItem('modalTextarea');
+} catch (err) {
+  isStorageSupport = false;
+}
+
+function onSubmitForm(evt) {
+  if (!fullname.value || !modalTelfield.value || !modalTextarea.value) {
+    evt.preventDefault();
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem('fullname', fullname.value);
+      localStorage.setItem('modalTelfield', modalTelfield.value);
+      localStorage.setItem('modalTextarea', modalTextarea.value);
+    }
+  }
+}
+
+for (var i = 0; i < telfields.length; i++) {
+  new IMask(telfields[i], {
     mask: '+{7}(000)0000000',
   });
 }
-
-var keys = {
-  escape: 'Escape',
-  esc: 'Escape',
-};
 
 function onToggleSections() {
   sectionsSite.classList.toggle('footer__sections-site--active');
@@ -33,25 +55,37 @@ function onToggleContacts() {
   sectionsSite.classList.remove('footer__sections-site--active');
 }
 
-// function isEscEven(evt) {
-//   evt.key === keys.escape || evt.key === keys.esc
-// }
-
-function addModal() {
+function onModalAdd() {
   modal.classList.add('modal--active');
   overLay.classList.remove('modal-overlay--deactive');
   page.classList.add('page--active');
+  window.removeEventListener('keydown', onEscapePress);
+
+  if (storage) {
+    fullName.value = storage;
+    modalTelfield.focus();
+  } else {
+    fullName.focus();
+  }
 }
 
-function removeModal() {
+function onModalClose(evt) {
+  evt.preventDefault();
   modal.classList.remove('modal--active');
   overLay.classList.add('modal-overlay--deactive');
   page.classList.remove('page--active');
 }
 
-headerButton.addEventListener('click', addModal);
-modalClose.addEventListener('click', removeModal);
-overLay.addEventListener('click', removeModal);
+function onEscapePress(evt) {
+  if (evt.keyCode === 27) {
+    onModalClose(evt);
+  }
+}
+
+headerButton.addEventListener('click', onModalAdd);
+modalClose.addEventListener('click', onModalClose);
+overLay.addEventListener('click', onModalClose);
 sectionsSite.addEventListener('click', onToggleSections);
 contacts.addEventListener('click', onToggleContacts);
-// isEscEvent.addEventListener('click', removeModal);
+window.addEventListener('keydown', onEscapePress);
+modalForm.addEventListener('click', onSubmitForm);

@@ -193,8 +193,8 @@
       <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="feedback__block-input">
           <div class="feedback__wrapper-input">
-            <label for="fullName"></label>
-            <input type="text" id="fullName" name="fullName" placeholder="Имя" required>
+            <label for="name"></label>
+            <input type="text" id="fullName" name="name" placeholder="Имя" required>
           </div>
           <div class="feedback__wrapper-input">
             <label for="phone"></label>
@@ -321,15 +321,15 @@
       <div class="modal__block-input">
         <div class="modal__wrapper-input">
           <label for="name"></label>
-          <input type="text" id="name" name="name" placeholder="Имя" required>
+          <input type="text" id="name" name="fullName" placeholder="Имя" required>
         </div>
         <div class="modal__wrapper-input">
           <label for="iphone"></label>
           <input type="tel" id="iphone" placeholder="Телефон" name="phone" maxlength="14" required>
         </div>
         <div class="modal__wrapper-textarea">
-          <label for="itextarea"></label>
-          <textarea id="itextarea" name="textarea" cols="30" rows="4" placeholder="Ваш вопрос"></textarea>
+          <label for="modalTextarea"></label>
+          <textarea id="modalTextarea" name="textarea" cols="30" rows="4" placeholder="Ваш вопрос"></textarea>
         </div>
       </div>
       <button class="modal__submit" type="submit">Отправить</button>
@@ -342,7 +342,7 @@
 
   <div class="modal-overlay modal-overlay--deactive"></div>
 
-  <script src="js/vendor/imask.js"></script>
+  <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
 </body>
 
