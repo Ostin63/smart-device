@@ -68,28 +68,9 @@
   text-decoration: none;
 
   svg {
-    width: 52px;
+    width: 202px;
     height: 52px;
     margin-right: 16px;
-  }
-}
-
-.footer__logo-text {
-  p {
-    margin: 5px 0 0;
-    font-family: $font-roboto-condensed;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 29px;
-    color: $black-logo;
-  }
-
-  small {
-    font-family: $font-roboto;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    color: $gray;
   }
 }
 

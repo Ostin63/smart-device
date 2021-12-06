@@ -59,21 +59,9 @@
 }
 
 .header__logo-text {
-  p {
-    margin: 5px 0 0;
-    font-family: $font-roboto-condensed;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 29px;
-    color: $white;
-  }
-
-  small {
-    font-family: $font-roboto;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    color: $gray;
+  svg {
+    width: 134px;
+    height: 45px;
   }
 
   @media (max-width: $tablet-width) {
