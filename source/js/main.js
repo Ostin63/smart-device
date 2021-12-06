@@ -78,7 +78,9 @@ function onModalClose(evt) {
 
 function onEscapePress(evt) {
   if (evt.keyCode === 27) {
-    onModalClose(evt);
+    if (modal.classList.contains('modal--active')) {
+      onModalClose();
+    }
   }
 }
 
@@ -87,5 +89,5 @@ modalClose.addEventListener('click', onModalClose);
 overLay.addEventListener('click', onModalClose);
 sectionsSite.addEventListener('click', onToggleSections);
 contacts.addEventListener('click', onToggleContacts);
-window.addEventListener('keydown', onEscapePress);
 modalForm.addEventListener('click', onSubmitForm);
+window.addEventListener('keydown', onEscapePress);
