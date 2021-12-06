@@ -59,7 +59,6 @@ function onModalAdd() {
   modal.classList.add('modal--active');
   overLay.classList.remove('modal-overlay--deactive');
   page.classList.add('page--active');
-  window.removeEventListener('keydown', onEscapePress);
 
   if (storage) {
     fullName.value = storage;
@@ -69,8 +68,7 @@ function onModalAdd() {
   }
 }
 
-function onModalClose(evt) {
-  evt.preventDefault();
+function onModalClose() {
   modal.classList.remove('modal--active');
   overLay.classList.add('modal-overlay--deactive');
   page.classList.remove('page--active');
@@ -79,6 +77,7 @@ function onModalClose(evt) {
 function onEscapePress(evt) {
   if (evt.keyCode === 27) {
     if (modal.classList.contains('modal--active')) {
+      evt.preventDefault();
       onModalClose();
     }
   }
