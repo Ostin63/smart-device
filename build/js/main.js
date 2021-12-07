@@ -28,11 +28,11 @@
   }
 
   function onSubmitForm(evt) {
-    if (!fullname.value || !modalTelfield.value || !modalTextarea.value) {
+    if (!fullName.value || !modalTelfield.value || !modalTextarea.value) {
       evt.preventDefault();
     } else {
       if (isStorageSupport) {
-        localStorage.setItem('fullname', fullname.value);
+        localStorage.setItem('fullName', fullName.value);
         localStorage.setItem('modalTelfield', modalTelfield.value);
         localStorage.setItem('modalTextarea', modalTextarea.value);
       }
