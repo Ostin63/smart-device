@@ -6,7 +6,7 @@
   "scripts": {
     "editorconfig": "editorconfig-cli --exclude vendor",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "test": "npm run editorconfig && npm run stylelint",
+    "test": "npm run editorconfig && npm run stylelint && eslint source/js/main.js",
     "build": "gulp build",
     "start": "gulp start",
     "webp": "gulp webp",
