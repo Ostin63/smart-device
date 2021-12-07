@@ -3,11 +3,11 @@
 /* eslint-disable strict */
 /* eslint-disable no-unused-vars */
 var page = document.querySelector('.page');
-var body = page.querySelector('.body');
+var body = page.querySelector('body');
 var headerButton = body.querySelector('.header__contacts-button');
 var modal = body.querySelector('.modal');
 var modalClose = modal.querySelector('.modal__close');
-var overLay = body.querySelector('.modal-overlay');
+var overLay = body.querySelector('.modal::after');
 var sectionsSite = body.querySelector('.footer__sections-site');
 var contacts = body.querySelector('.footer__contacts');
 var modalForm = modal.querySelector('.modal__feedback-form');
@@ -15,6 +15,7 @@ var fullName = modalForm.querySelector('input[name=fullName]');
 var telfields = body.querySelectorAll('input[type=tel]');
 var modalTelfield = modalForm.querySelector('input[type=tel]');
 var modalTextarea = modalForm.querySelector('#modalTextarea');
+var ESC = 27;
 
 var isStorageSupport = true;
 var storage = '';
@@ -56,8 +57,7 @@ function onToggleContacts() {
 }
 
 function onModalAdd() {
-  modal.classList.add('modal--active');
-  overLay.classList.remove('modal-overlay--deactive');
+  modal.classList.remove('modal--deactive');
   page.classList.add('page--active');
 
   if (storage) {
@@ -69,14 +69,13 @@ function onModalAdd() {
 }
 
 function onModalClose() {
-  modal.classList.remove('modal--active');
-  overLay.classList.add('modal-overlay--deactive');
+  modal.classList.add('modal--deactive');
   page.classList.remove('page--active');
 }
 
 function onEscapePress(evt) {
-  if (evt.keyCode === 27) {
-    if (modal.classList.contains('modal--active')) {
+  if (evt.keyCode === ESC) {
+    if (!modal.classList.contains('modal--deactive')) {
       evt.preventDefault();
       onModalClose();
     }
@@ -85,7 +84,9 @@ function onEscapePress(evt) {
 
 headerButton.addEventListener('click', onModalAdd);
 modalClose.addEventListener('click', onModalClose);
-overLay.addEventListener('click', onModalClose);
+if (overLay) {
+  overLay.addEventListener('click', onModalClose);
+}
 sectionsSite.addEventListener('click', onToggleSections);
 contacts.addEventListener('click', onToggleContacts);
 modalForm.addEventListener('click', onSubmitForm);

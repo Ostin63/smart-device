@@ -9,14 +9,11 @@
   @media (max-width: $desktop-width) {
     background-image: url("../img/bg-edge-tablet.svg");
     background-position: 100% 40%;
-    background-repeat: no-repeat;
     background-size: 559px 873px;
   }
 
   @media (max-width: $tablet-width) {
     background-image: url("../img/bg-edge-modal.svg");
-    background-position: 100% 40%;
-    background-repeat: no-repeat;
     background-size: 320px 873px;
   }
 }

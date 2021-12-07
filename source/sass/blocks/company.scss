@@ -53,9 +53,6 @@
       font-size: 178.324px;
       line-height: 251px;
       background-image: url("../img/img-mask-data-tablet.jpg");
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-clip: text;
     }
   }
 
@@ -148,29 +145,15 @@
 }
 
 .company__text-max {
-  display: block;
-
   @media (max-width: $desktop-width) {
     display: none;
   }
 }
 
-.company__text-tablet {
+.company__text-min {
   display: none;
 
   @media (max-width: $desktop-width) {
-    display: block;
-  }
-
-  @media (max-width: $tablet-width){
-    display: none;
-  }
-}
-
-.company__text-modal {
-  display: none;
-
-  @media (max-width: $tablet-width) {
     display: block;
   }
 }

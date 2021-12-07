@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body class="body">
+<body>
 
   <header class="body__header header">
     <div class="header__top-menu">
@@ -114,19 +114,7 @@
             <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с
               1997 года.
               Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-            <p>
-              <span class="company__text-modal">Наши поставщики - мировые производители электронных компонентов: OSRAM,
-                CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях
-                Российских Железных Дорог..</span>
-              <span class="company__text-tablet">Наши поставщики - мировые производители электронных компонентов: OSRAM,
-                CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices
-                применяются&nbsp;на&nbsp;предприятиях Российских&nbsp;Железных&nbsp;Дорог..</span>
-              <span class="company__text-max">Наши поставщики - мировые производители электронных компонентов: OSRAM,
-                CREE, HOLGLITRONIC, REFOND.
-                Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог
-                (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
-                Производители светотехники России.</span>
-            </p>
+            <p>Наши поставщики - мировые производители электронных компонентов: OSRAM,CREE, HOLGLITRONIC, REFOND.Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных<span class="company__text-min">Дорог..</span><span class="company__text-max"> Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), Производители светотехники России.</span></p>
             <a href="#">Подробнее</a>
           </div>
         </div>
@@ -136,7 +124,7 @@
       <h2>Service Device предлагает следующие товары и услуги</h2>
       <ul class="goods__list">
         <li class="goods__item">
-          <a href="" class="goods__link">
+          <a href="#" class="goods__link">
             <p>Производство <br>печатных плат</p>
             <div class="goods__block-img">
               <picture>
@@ -153,7 +141,7 @@
           </a>
         </li>
         <li class="goods__item">
-          <a href="" class="goods__link">
+          <a href="#" class="goods__link">
             <p>Монтаж печатных <br>плат</p>
             <div class="goods__block-img">
               <picture>
@@ -191,22 +179,28 @@
       <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="feedback__block-input">
           <div class="feedback__wrapper-input">
-            <label for="name"></label>
+            <label for="name">
+              <span class="visually-hidden">Имя</span>
+            </label>
             <input type="text" id="fullName" name="name" placeholder="Имя" required>
           </div>
           <div class="feedback__wrapper-input">
-            <label for="phone"></label>
+            <label for="phone">
+              <span class="visually-hidden">Телефон</span>
+            </label>
             <input type="tel" id="phone" placeholder="Телефон" name="phone" maxlength="14" required>
           </div>
           <div class="feedback__wrapper-textarea">
-            <label for="textarea"></label>
+            <label for="textarea">
+              <span class="visually-hidden">Задайте нам вопрос</span>
+            </label>
             <textarea id="textarea" name="textarea" cols="30" rows="5" placeholder="Ваш вопрос"></textarea>
           </div>
         </div>
         <div class="feedback__bottom-block">
           <button class="feedback__submit" type="submit">Задать вопрос</button>
           <div class="feedback__wrapper-checkbox">
-            <input class="visually-hidden" type="checkbox" id="checkbox" name="sweetener" checked required>
+            <input class="visually-hidden" type="checkbox" id="checkbox" name="sweetener" checked>
             <label for="checkbox">Я согласен на обработку персональных данных</label>
           </div>
         </div>
@@ -278,18 +272,10 @@
           <div class="footer__contacts">
             <h3>Наш офис</h3>
             <ul class="footer__contacts-list">
-              <li class="footer__contacts-item">
-                <p>г. Мытищи, Олимпийский проспект, д.10</p>
-              </li>
-              <li class="footer__contacts-item">
-                <p>+7 (495) 589-40-50</p>
-              </li>
-              <li class="footer__contacts-item">
-                <p>+7 (925) 003-87-67</p>
-              </li>
-              <li class="footer__contacts-item">
-                <p>+7 (926) 926-080-79</p>
-              </li>
+              <li class="footer__contacts-item">г. Мытищи, Олимпийский проспект, д.10</li>
+              <li class="footer__contacts-item">+7 (495) 589-40-50</li>
+              <li class="footer__contacts-item">>+7 (925) 003-87-67</li>
+              <li class="footer__contacts-item">+7 (926) 926-080-79</li>
             </ul>
           </div>
         </div>
@@ -305,39 +291,39 @@
 
   </footer>
 
-  <div class="modal">
-    <h2>Закажите звонок</h2>
-    <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-    <div class="modal__close">
-      <span class="visually-hidden">Закрыть окно</span>
+  <div class="modal modal--deactive">
+    <div class="modal__wrapper">
+      <h2>Закажите звонок</h2>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <div class="modal__close">
+        <span class="visually-hidden">Закрыть окно</span>
+      </div>
+      <form class="modal__feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="modal__block-input">
+          <div class="modal__wrapper-input">
+            <label for="name"></label>
+            <input type="text" id="name" name="fullName" placeholder="Имя" required>
+          </div>
+          <div class="modal__wrapper-input">
+            <label for="iphone"></label>
+            <input type="tel" id="iphone" placeholder="Телефон" name="phone" maxlength="14" required>
+          </div>
+          <div class="modal__wrapper-textarea">
+            <label for="modalTextarea"></label>
+            <textarea id="modalTextarea" name="textarea" cols="30" rows="4" placeholder="Ваш вопрос"></textarea>
+          </div>
+        </div>
+        <button class="modal__submit" type="submit">Отправить</button>
+        <div class="modal__wrapper-checkbox">
+          <input class="visually-hidden" type="checkbox" id="modal-checkbox" name="sweetener" checked required>
+          <label for="modal-checkbox">Я согласен на обработку персональных данных</label>
+        </div>
+      </form>
     </div>
-    <form class="modal__feedback-form" action="https://echo.htmlacademy.ru/" method="post">
-      <div class="modal__block-input">
-        <div class="modal__wrapper-input">
-          <label for="name"></label>
-          <input type="text" id="name" name="fullName" placeholder="Имя" required>
-        </div>
-        <div class="modal__wrapper-input">
-          <label for="iphone"></label>
-          <input type="tel" id="iphone" placeholder="Телефон" name="phone" maxlength="14" required>
-        </div>
-        <div class="modal__wrapper-textarea">
-          <label for="modalTextarea"></label>
-          <textarea id="modalTextarea" name="textarea" cols="30" rows="4" placeholder="Ваш вопрос"></textarea>
-        </div>
-      </div>
-      <button class="modal__submit" type="submit">Отправить</button>
-      <div class="modal__wrapper-checkbox">
-        <input class="visually-hidden" type="checkbox" id="modal-checkbox" name="sweetener" checked required>
-        <label for="modal-checkbox">Я согласен на обработку персональных данных</label>
-      </div>
-    </form>
   </div>
 
-  <div class="modal-overlay modal-overlay--deactive"></div>
-
   <script src="js/vendor.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/LIFE/main.js"></script>
 </body>
 
 </html>
