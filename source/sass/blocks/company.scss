@@ -144,16 +144,16 @@
   }
 }
 
-.company__text-max {
+.company__text-prune {
   @media (max-width: $desktop-width) {
-    display: none;
+    -webkit-line-clamp: 4;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
-}
 
-.company__text-min {
-  display: none;
-
-  @media (max-width: $desktop-width) {
-    display: block;
+  @media (max-width: $tablet-width) {
+    -webkit-line-clamp: 8;
   }
 }
