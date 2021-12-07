@@ -16,7 +16,7 @@
 
 <body>
 
-  <header class="body__header header">
+  <header class="header">
     <div class="header__top-menu">
       <a class="header__logo-link" href="#">
         <svg role="img" aria-label="Логотип" width="52" height="52">
@@ -46,7 +46,7 @@
     </div>
   </header>
 
-  <main class="body__main main">
+  <main class="main">
     <section class="boards">
       <div class="boards__wrapper">
         <h1>Печатные платы</h1>
@@ -160,7 +160,7 @@
           </a>
         </li>
         <li class="goods__item">
-          <a href="" class="goods__link">
+          <a href="#" class="goods__link">
             <p>Комплектующие <br>для светотехники</p>
             <div class="goods__block-img">
               <picture>
@@ -181,28 +181,22 @@
       <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="feedback__block-input">
           <div class="feedback__wrapper-input">
-            <label for="name">
-              <span class="visually-hidden">Имя</span>
-            </label>
+            <label class="visually-hidden" for="name">Имя</label>
             <input type="text" id="fullName" name="name" placeholder="Имя" required="">
           </div>
           <div class="feedback__wrapper-input">
-            <label for="phone">
-              <span class="visually-hidden">Телефон</span>
-            </label>
+            <label class="visually-hidden" for="phone">Телефон</label>
             <input type="tel" id="phone" placeholder="Телефон" name="phone" maxlength="14" required="">
           </div>
           <div class="feedback__wrapper-textarea">
-            <label for="textarea">
-              <span class="visually-hidden">Задайте нам вопрос</span>
-            </label>
+            <label class="visually-hidden" for="textarea">Задайте нам вопрос</label>
             <textarea id="textarea" name="textarea" cols="30" rows="5" placeholder="Ваш вопрос"></textarea>
           </div>
         </div>
         <div class="feedback__bottom-block">
           <button class="feedback__submit" type="submit">Задать вопрос</button>
           <div class="feedback__wrapper-checkbox">
-            <input class="visually-hidden" type="checkbox" id="checkbox" name="sweetener" checked="">
+            <input class="visually-hidden" type="checkbox" id="checkbox" name="sweetener" required="">
             <label for="checkbox">Я согласен на обработку персональных данных</label>
           </div>
         </div>
@@ -303,21 +297,21 @@
       <form class="modal__feedback-form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="modal__block-input">
           <div class="modal__wrapper-input">
-            <label for="name"></label>
+            <label class="visually-hidden" for="name">Имя</label>
             <input type="text" id="name" name="fullName" placeholder="Имя" required="">
           </div>
           <div class="modal__wrapper-input">
-            <label for="iphone"></label>
+            <label class="visually-hidden" for="iphone">Телефон</label>
             <input type="tel" id="iphone" placeholder="Телефон" name="phone" maxlength="14" required="">
           </div>
           <div class="modal__wrapper-textarea">
-            <label for="modalTextarea"></label>
+            <label class="visually-hidden" for="modalTextarea">Задайте нам вопрос</label>
             <textarea id="modalTextarea" name="textarea" cols="30" rows="4" placeholder="Ваш вопрос"></textarea>
           </div>
         </div>
         <button class="modal__submit" type="submit">Отправить</button>
         <div class="modal__wrapper-checkbox">
-          <input class="visually-hidden" type="checkbox" id="modal-checkbox" name="sweetener" checked="" required="">
+          <input class="visually-hidden" type="checkbox" id="modal-checkbox" name="sweetener" required="">
           <label for="modal-checkbox">Я согласен на обработку персональных данных</label>
         </div>
       </form>
