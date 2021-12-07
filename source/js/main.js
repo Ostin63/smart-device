@@ -1,6 +1,5 @@
-/* eslint-disable strict */
 /* eslint-disable no-undef */
-/* eslint-disable no-new */
+'use strict';
 (function () {
   var page = document.querySelector('.page');
   var body = page.querySelector('body');
@@ -40,6 +39,7 @@
   }
 
   for (var i = 0; i < telfields.length; i++) {
+    // eslint-disable-next-line no-new
     new IMask(telfields[i], {
       mask: '+{7}(000)0000000',
     });
