@@ -1,3 +1,195 @@
-.main {
-  margin-bottom: auto;
+.header {
+  position: absolute;
+  width: 100%;
+  background: $white-00;
+}
+
+.header__top-menu {
+  width: 1425px;
+  margin: 0 auto;
+  padding: 34px 10px 20px 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: $desktop-width-max) {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25px max-content 1fr max-content 25px;
+  }
+
+  @media (max-width: $desktop-width) {
+    padding: 20px 0 20px 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 17px 0 5px;
+    grid-template-columns: 17px max-content 1fr max-content 15px;
+  }
+}
+
+.header__logo-link {
+  display: flex;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  svg {
+    width: 52px;
+    height: 52px;
+    margin-right: 16px;
+
+    @media (max-width: $tablet-width) {
+      width: 38px;
+      height: 38px;
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: $desktop-width-max) {
+    grid-column: 2 / 3;
+  }
+}
+
+.header__logo-text {
+  svg {
+    width: 134px;
+    height: 45px;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__contacts {
+  min-width: 659px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $desktop-width-max) {
+    min-width: 85px;
+    grid-column: 4 / -2;
+  }
+}
+
+.header__contacts-mail,
+.header__contacts-phone {
+  margin-right: 88px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  svg {
+    width: 19px;
+    height: 14px;
+    margin-right: 20px;
+
+    @media (max-width: $desktop-width) {
+      width: 26px;
+      height: 19px;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: $desktop-width) {
+    margin-left: auto;
+    margin-right: 33px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-right: 23px;
+  }
+
+  p {
+    margin: 0;
+    font-family: $font-pt-mono;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: $white;
+
+    @media (max-width: $desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.header__contacts-phone {
+  margin-right: 38px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 16px;
+
+    @media (max-width: $desktop-width) {
+      width: 24px;
+      height: 24px;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.header__contacts-button {
+  width: 180px;
+  height: 45px;
+  margin-top: 3px;
+  margin-left: auto;
+  border: $border-white-1;
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: $font-roboto-condensed;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
 }

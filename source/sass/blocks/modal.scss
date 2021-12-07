@@ -28,7 +28,7 @@
   position: fixed;
   width: 490px;
   padding: 30px 39px 36px;
-  left: calc(50% - 490px/2);
+  left: calc(50% - 490px / 2);
   top: 136px;
   background-color: $blue;
   z-index: 1500;
@@ -148,7 +148,6 @@
   &:active {
     opacity: 0.9;
   }
-
 }
 
 .modal__wrapper-checkbox {
@@ -178,7 +177,7 @@
     }
   }
 
-  input:checked+label::before {
+  input:checked + label::before {
     background: url("../img/icon-checkbox-on.svg") 50% 50% no-repeat;
     background-size: cover;
   }

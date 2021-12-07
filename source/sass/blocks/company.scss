@@ -41,7 +41,7 @@
     margin: 0;
     font-family: $font-roboto-condensed;
     font-weight: bold;
-    font-size: 156.248px;
+    font-size: 156px;
     line-height: 115px;
     background-image: url("../img/img-mask-data.jpg");
     background-repeat: no-repeat;
@@ -50,7 +50,7 @@
     color: rgba(0, 0, 0, 0);
 
     @media (max-width: $desktop-width) {
-      font-size: 178.324px;
+      font-size: 178px;
       line-height: 251px;
       background-image: url("../img/img-mask-data-tablet.jpg");
     }
@@ -67,7 +67,7 @@
 
   @media (max-width: $desktop-width) {
     margin-left: 186px;
-    padding-right: 0px;
+    padding-right: 0;
   }
 
   @media (max-width: $tablet-width) {
@@ -144,16 +144,16 @@
   }
 }
 
-.company__text-prune {
-  @media (max-width: $desktop-width) {
-    -webkit-line-clamp: 4;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
+.company__text-tablet {
+  display: none;
 
-  @media (max-width: $tablet-width) {
-    -webkit-line-clamp: 8;
+  @media (max-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.company__text-big {
+  @media (max-width: $desktop-width) {
+    display: none;
   }
 }
