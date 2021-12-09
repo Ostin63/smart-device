@@ -180,12 +180,12 @@
   }
 
   input {
-    &:checked+label::before {
+    &:checked + label::before {
       background: url("../img/icon-checkbox-on.svg") 50% 50% no-repeat;
       background-size: cover;
     }
 
-    &:focus+label::before {
+    &:focus + label::before {
       box-shadow: $shadow;
     }
   }

@@ -12,20 +12,12 @@
   var contacts = body.querySelector('.footer__contacts');
   var modalForm = modal.querySelector('.modal__feedback-form');
   var fullName = modalForm.querySelector('input[name=fullName]');
+  var modalTextarea = modalForm.querySelector('#modalTextarea');
   var telfields = body.querySelectorAll('input[type=tel]');
   var modalTelfield = modalForm.querySelector('input[type=tel]');
-  var modalTextarea = modalForm.querySelector('#modalTextarea');
+
   var ESC = 27;
   var TAB = 9;
-
-  focusElements = [
-    '#name',
-    '#modalPhone',
-    '#modalTextarea',
-    '#modalCheckbox',
-    '.modal__submit',
-    '.modal__close',
-  ];
 
   sectionsSiteList.classList.add('footer__sections-site-list--deactive');
   contactsList.classList.add('footer__contacts-list--deactive');
@@ -94,14 +86,14 @@
     }
   }
 
-  function onTab(evt) {
-    if (evt.keyCode === TAB) {
-      if (modalClose.focus()) {
-        fullName.focus();
-      }
+  function onTabPress(evt) {
+    if (evt.keyCode === TAB && document.activeElement === modalClose) {
+      evt.preventDefault();
+      fullName.focus();
     }
   }
 
+  document.addEventListener('keydown', onTabPress);
   headerButton.addEventListener('click', onModalAdd);
   modalClose.addEventListener('click', onModalClose);
   modal.addEventListener('click', function (evt) {
@@ -113,5 +105,4 @@
   contacts.addEventListener('click', onToggleContacts);
   modalForm.addEventListener('click', onSubmitForm);
   window.addEventListener('keydown', onEscapePress);
-  window.addEventListener('keydown', onTab);
 })();
