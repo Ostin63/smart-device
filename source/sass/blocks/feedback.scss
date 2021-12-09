@@ -8,14 +8,16 @@
     url("../img/bg-form-rigth.png");
   background-repeat: no-repeat;
   background-position: 14% 0, 100% 0;
-  background-size: auto auto;
+  background-size: auto auto, auto auto;
 
   @media (max-width: $desktop-width-max-only) {
     background-position: 14% 40%, 100% 0;
+    background-size: 40% auto, auto auto;
   }
 
   @media (max-width: $desktop-width-only) {
-    grid-template-columns: 30px 1fr 30px;
+    grid-template-columns: 30px 1fr 570px 30px;
+    background-position: 0 50%, 100% 0;
   }
 
   @media (max-width: $desktop-width) {
@@ -116,7 +118,7 @@
     line-height: 22px;
     border-radius: 0;
     border: none;
-    background: $blue-ligth;
+    background: $white-10;
     color: $white;
     outline: none;
 
