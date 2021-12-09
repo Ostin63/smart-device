@@ -1,9 +1,11 @@
-$mobile-width: 320px;
+$mobile-width: 338px;
 $tablet-width: 767px;
 $tablet-width-only: 768px;
+$tablet-width-special: 770px;
 $desktop-width: 1023px;
 $desktop-width-only: 1200px;
 $desktop-width-max: 1443px;
+$desktop-width-max-only:1650px;
 
 $font-pt-mono: "pt-mono", "Arial", sans-serif;
 $font-roboto: "roboto", "Arial", sans-serif;
@@ -24,6 +26,7 @@ $black: #1b2d37;
 $black-10: rgba(#000000, 0.1);
 $black-logo: #203c42;
 $blue: #00b2ff;
+$blue-ligth: rgba(#30c1ff, 0.9);
 $yellow: #eed80e;
 
 $border-white-1: 1px solid $white;

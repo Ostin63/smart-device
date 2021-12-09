@@ -7,6 +7,8 @@
   var modal = body.querySelector('.modal');
   var modalClose = modal.querySelector('.modal__close');
   var sectionsSite = body.querySelector('.footer__sections-site');
+  var sectionsSiteList = body.querySelector('.footer__sections-site-list');
+  var contactsList = body.querySelector('.footer__contacts-list');
   var contacts = body.querySelector('.footer__contacts');
   var modalForm = modal.querySelector('.modal__feedback-form');
   var fullName = modalForm.querySelector('input[name=fullName]');
@@ -14,6 +16,10 @@
   var modalTelfield = modalForm.querySelector('input[type=tel]');
   var modalTextarea = modalForm.querySelector('#modalTextarea');
   var ESC = 27;
+  var TAB = 9;
+
+  sectionsSiteList.classList.add('footer__sections-site-list--deactive');
+  contactsList.classList.add('footer__contacts-list--deactive');
 
   var isStorageSupport = true;
   var storage = '';
@@ -26,10 +32,8 @@
     isStorageSupport = false;
   }
 
-  function onSubmitForm(evt) {
-    if (!fullName.value || !modalTelfield.value || !modalTextarea.value) {
-      evt.preventDefault();
-    } else {
+  function onSubmitForm() {
+    if (fullName.value || modalTelfield.value || modalTextarea.value) {
       if (isStorageSupport) {
         localStorage.setItem('fullName', fullName.value);
         localStorage.setItem('modalTelfield', modalTelfield.value);
@@ -81,6 +85,14 @@
     }
   }
 
+  function onTab(evt) {
+    if (evt.keyCode === TAB) {
+      if (modalClose.focus()) {
+        fullName.focus();
+      }
+    }
+  }
+
   headerButton.addEventListener('click', onModalAdd);
   modalClose.addEventListener('click', onModalClose);
   modal.addEventListener('click', function (evt) {
@@ -92,5 +104,5 @@
   contacts.addEventListener('click', onToggleContacts);
   modalForm.addEventListener('click', onSubmitForm);
   window.addEventListener('keydown', onEscapePress);
-
+  window.addEventListener('keydown', onTab);
 })();

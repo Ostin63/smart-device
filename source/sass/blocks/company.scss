@@ -106,6 +106,10 @@
     color: $gray-text;
     grid-column: 2 / -2;
 
+    span {
+      width: 100%;
+    }
+
     @media (max-width: $tablet-width) {
       margin: 0 0 40px 0;
     }

@@ -2,6 +2,10 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
 
   &::after {
     position: fixed;
@@ -25,11 +29,10 @@
 }
 
 .modal__wrapper {
-  position: fixed;
+  position: relative;
   width: 490px;
   padding: 30px 39px 36px;
-  left: calc(50% - 490px / 2);
-  top: 136px;
+  overflow-y: auto;
   background-color: $blue;
   z-index: 1500;
 
@@ -60,21 +63,6 @@
     font-size: 16px;
     line-height: 22px;
     color: $white;
-  }
-}
-
-.modal__close {
-  position: absolute;
-  width: 17px;
-  height: 17px;
-  top: 20px;
-  right: 20px;
-  background: url("../img/icon-close.svg") 50% 50% no-repeat;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    opacity: 0.5;
   }
 }
 
@@ -121,13 +109,19 @@
 
   textarea {
     padding: 13px 24px 0;
+    resize: none;
   }
+}
+
+.modal__bottom-block {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .modal__submit {
   width: 100%;
   height: 45px;
-  margin-top: 25px;
   font-family: $font-roboto-condensed;
   font-weight: bold;
   font-size: 14px;
@@ -138,6 +132,7 @@
   border: $border-white-1;
   border-radius: 5px;
   background: $blue;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -164,6 +159,7 @@
     position: relative;
     padding: 0 40px 0 48px;
     display: block;
+    cursor: pointer;
 
     &::before {
       position: absolute;
@@ -175,10 +171,42 @@
       background: url("../img/icon-checkbox-off.svg") 50% 50% no-repeat;
       background-size: cover;
     }
+
+    &:hover::before,
+    &:focus::before {
+      opacity: 0.5;
+    }
   }
 
-  input:checked + label::before {
-    background: url("../img/icon-checkbox-on.svg") 50% 50% no-repeat;
-    background-size: cover;
+  input {
+    &:checked+label::before {
+      background: url("../img/icon-checkbox-on.svg") 50% 50% no-repeat;
+      background-size: cover;
+    }
+
+    &:focus+label::before {
+      box-shadow: $shadow;
+    }
+  }
+}
+
+.modal__close {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 17px;
+  right: 17px;
+  padding: 3px;
+  border: none;
+  background: url("../img/icon-close.svg") 50% 50% no-repeat;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    box-shadow: $shadow;
   }
 }

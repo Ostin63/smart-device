@@ -3,10 +3,16 @@
   display: grid;
   grid-template-columns: 1fr 600px 570px 1fr;
   background-color: $blue;
-  background-image: url("../img/bg-form.png");
+  background-image:
+    url("../img/bg-form-air.png"),
+    url("../img/bg-form-rigth.png");
   background-repeat: no-repeat;
-  background-position: 100% 62%;
-  background-size: auto 765px;
+  background-position: 14% 0, 100% 0;
+  background-size: auto auto;
+
+  @media (max-width: $desktop-width-max-only) {
+    background-position: 14% 40%, 100% 0;
+  }
 
   @media (max-width: $desktop-width-only) {
     grid-template-columns: 30px 1fr 30px;
@@ -35,11 +41,11 @@
 
     @media (max-width: $desktop-width-only) {
       width: 570px;
+      margin: 0 auto;
     }
 
     @media (max-width: $desktop-width) {
       width: 591px;
-      margin: 0 auto;
       font-size: 32px;
       line-height: 140.62%;
     }
@@ -109,7 +115,7 @@
     font-size: 16px;
     line-height: 22px;
     border: none;
-    background: $white-10;
+    background: $blue-ligth;
     color: $white;
     outline: none;
 
@@ -161,6 +167,7 @@
     width: 570px;
     height: 154px;
     padding: 13px 16px 0;
+    resize: none;
 
     @media (max-width: $desktop-width) {
       width: 591px;
@@ -177,11 +184,13 @@
 .feedback__bottom-block {
   margin-top: 43px;
   display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   align-items: center;
 
   @media (max-width: $tablet-width) {
     margin-top: 28px;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 
@@ -198,6 +207,7 @@
   border: $border-white-1;
   border-radius: 5px;
   background: $blue;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -221,7 +231,7 @@
 
 .feedback__wrapper-checkbox {
   width: 270px;
-  padding-left: 38px;
+  padding-left: 8px;
   font-family: $font-pt-mono;
   font-weight: normal;
   font-size: 14px;
@@ -233,6 +243,7 @@
     position: relative;
     padding-left: 32px;
     display: block;
+    cursor: pointer;
 
     @media (max-width: $desktop-width) {
       padding-left: 36px;
@@ -252,11 +263,22 @@
         left: 4px;
       }
     }
+
+    &:hover::before,
+    &:focus::before {
+      opacity: 0.5;
+    }
   }
 
-  input:checked + label::before {
-    background: url("../img/icon-checkbox-on.svg") 50% 50% no-repeat;
-    background-size: cover;
+  input {
+    &:checked+label::before {
+      background: url("../img/icon-checkbox-on.svg") 50% 50% no-repeat;
+      background-size: cover;
+    }
+
+    &:focus+label::before {
+      box-shadow: $shadow;
+    }
   }
 
   @media (max-width: $desktop-width) {

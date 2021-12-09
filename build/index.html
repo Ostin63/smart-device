@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart Device">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smart Device</title>
   <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font" type="font/woff2" crossorigin="">
@@ -18,7 +19,7 @@
 
   <header class="header">
     <div class="header__top-menu">
-      <a class="header__logo-link" href="#">
+      <a class="header__logo-link">
         <svg role="img" aria-label="Логотип" width="52" height="52">
           <use xlink:href="img/sprite_auto.svg#icon-logo-img"></use>
         </svg>
@@ -114,13 +115,8 @@
             <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с
               1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
             <p>
-              <span class="company__text-tablet">Наши поставщики - мировые производители электронных компонентов:
-                OSRAM,CREE, HOLGLITRONIC, REFOND.Печатные платы и
-                комплектующие Service Devices применяются на предприятиях Российских Железных Дорог..</span>
-              <span class="company__text-big">Наши поставщики - мировые производители электронных компонентов:
-                OSRAM,CREE, HOLGLITRONIC, REFOND.Печатные платы и
-                комплектующие Service Devices применяются на предприятиях Российских ЖелезныхДорог (РЖД), РоссАвтоПрома
-                (ВАЗ, АвтоГАЗ), Производители светотехники России.</span>
+              <span class="company__text-tablet">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог..</span>
+              <span class="company__text-big">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
             </p>
             <a href="#">Подробнее</a>
           </div>
@@ -136,7 +132,7 @@
             <div class="goods__block-img">
               <picture>
                 <source type="image/webp" media="(min-width: 1024px)" srcset="img/production.webp, img/production@2.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/production-tablet.webp, img/production-tablet@2.webp 2x">
+                <source type="image/webp" media="(min-width: 338px)" srcset="img/production-tablet.webp, img/production-tablet@2.webp 2x">
                 <source type="image/webp" srcset="img/production-modal.webp, img/production-modal@2.webp 2x">
                 <!-- 1х: 370px; 2x: 740px -->
                 <img src="img/production.png" srcset="img/production@2.png" width="370" height="620" alt="Фото производства печатных плат">
@@ -150,7 +146,7 @@
             <div class="goods__block-img">
               <picture>
                 <source type="image/webp" media="(min-width: 1023px)" srcset="img/mounting.webp, img/mounting@2.webp 2x">
-                <source type="image/webp" media="(min-width: 767px)" srcset="img/mounting-tablet.webp, img/mounting-tablet@2.webp 2x">
+                <source type="image/webp" media="(min-width: 338px)" srcset="img/mounting-tablet.webp, img/mounting-tablet@2.webp 2x">
                 <source type="image/webp" srcset="img/mounting-modal.webp, img/mounting-modal@2.webp 2x">
                 <!-- 1х: 370px; 2x: 740px -->
                 <img src="img/mounting.png" srcset="img/mounting@2.png" width="370" height="620" alt="Фото Монтажа печатных плат">
@@ -164,7 +160,7 @@
             <div class="goods__block-img">
               <picture>
                 <source type="image/webp" media="(min-width: 1024px)" srcset="img/accessories.webp, img/accessories@2.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/accessories-tablet.webp, img/accessories-tablet@2.webp 2x">
+                <source type="image/webp" media="(min-width: 338px)" srcset="img/accessories-tablet.webp, img/accessories-tablet@2.webp 2x">
                 <source type="image/webp" srcset="img/accessories-modal.webp, img/accessories-modal@2.webp 2x">
                 <!-- 1х: 370px; 2x: 740px -->
                 <img src="img/accessories.png" srcset="img/accessories@2.png" width="370" height="620" alt="Фото Комплектующих для светотехники">
@@ -193,11 +189,11 @@
           </div>
         </div>
         <div class="feedback__bottom-block">
-          <button class="feedback__submit" type="submit">Задать вопрос</button>
           <div class="feedback__wrapper-checkbox">
-            <input class="visually-hidden" type="checkbox" id="checkbox" name="sweetener" required="">
+            <input class="visually-hidden" type="checkbox" id="checkbox" name="agreement" required="">
             <label for="checkbox">Я согласен на обработку персональных данных</label>
           </div>
+          <button class="feedback__submit" type="submit">Задать вопрос</button>
         </div>
       </form>
     </section>
@@ -268,9 +264,15 @@
             <h3>Наш офис</h3>
             <ul class="footer__contacts-list">
               <li class="footer__contacts-item">г. Мытищи, Олимпийский проспект, д.10</li>
-              <li class="footer__contacts-item">+7 (495) 589-40-50</li>
-              <li class="footer__contacts-item">>+7 (925) 003-87-67</li>
-              <li class="footer__contacts-item">+7 (926) 926-080-79</li>
+              <li class="footer__contacts-item">
+                <a href="tel:+74955894050">+7 (495) 589-40-50</a>
+              </li>
+              <li class="footer__contacts-item">
+                <a href="tel:+79250038767">+7 (925) 003-87-67</a>
+              </li>
+              <li class="footer__contacts-item">
+                <a href="tel:+792692608079">+7 (926) 926-080-79</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -290,9 +292,6 @@
     <div class="modal__wrapper">
       <h2>Закажите звонок</h2>
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-      <div class="modal__close">
-        <span class="visually-hidden">Закрыть окно</span>
-      </div>
       <form class="modal__feedback-form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="modal__block-input">
           <div class="modal__wrapper-input">
@@ -308,13 +307,18 @@
             <textarea id="modalTextarea" name="textarea" cols="30" rows="4" placeholder="Ваш вопрос"></textarea>
           </div>
         </div>
-        <button class="modal__submit" type="submit">Отправить</button>
-        <div class="modal__wrapper-checkbox">
-          <input class="visually-hidden" type="checkbox" id="modal-checkbox" name="sweetener" required="">
-          <label for="modal-checkbox">Я согласен на обработку персональных данных</label>
+        <div class="modal__bottom-block">
+          <div class="modal__wrapper-checkbox">
+            <input class="visually-hidden" type="checkbox" id="modal-checkbox" name="agreement" required="">
+            <label for="modal-checkbox">Я согласен на обработку персональных данных</label>
+          </div>
+          <button class="modal__submit" type="submit">Отправить</button>
         </div>
       </form>
-    </div>
+      <button class="modal__close" type="button">
+        <span class="visually-hidden">Закрыть окно</span>
+      
+    </button></div>
   </div>
 
   <script src="js/vendor.js"></script>

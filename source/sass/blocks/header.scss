@@ -59,6 +59,8 @@
 }
 
 .header__logo-text {
+  margin-top: 6px;
+
   svg {
     width: 134px;
     height: 45px;
@@ -70,11 +72,12 @@
 }
 
 .header__contacts {
-  min-width: 659px;
+  width: 674px;
   display: flex;
   flex-wrap: wrap;
 
   @media (max-width: $desktop-width-max) {
+    width: 100%;
     min-width: 85px;
     grid-column: 4 / -2;
   }
@@ -82,7 +85,7 @@
 
 .header__contacts-mail,
 .header__contacts-phone {
-  margin-right: 88px;
+  margin: 12px 73px 15px 15px;
   display: flex;
   align-items: center;
   text-decoration: none;
