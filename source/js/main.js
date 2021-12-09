@@ -18,6 +18,15 @@
   var ESC = 27;
   var TAB = 9;
 
+  focusElements = [
+    '#name',
+    '#modalPhone',
+    '#modalTextarea',
+    '#modalCheckbox',
+    '.modal__submit',
+    '.modal__close',
+  ];
+
   sectionsSiteList.classList.add('footer__sections-site-list--deactive');
   contactsList.classList.add('footer__contacts-list--deactive');
 

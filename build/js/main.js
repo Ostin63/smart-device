@@ -18,6 +18,20 @@
   var ESC = 27;
   var TAB = 9;
 
+  // focusElements = [
+  //   'a[href]',
+  //   'area[href]',
+  //   'input:not([disabled]):not([type="hidden"]):not([aria-hidden])',
+  //   'select:not([disabled]):not([aria-hidden])',
+  //   'textarea:not([disabled]):not([aria-hidden])',
+  //   'button:not([disabled]):not([aria-hidden])',
+  //   'iframe',
+  //   'object',
+  //   'embed',
+  //   '[contenteditable]',
+  //   '[tabindex]:not([tabindex^="-"])'
+  // ];
+
   sectionsSiteList.classList.add('footer__sections-site-list--deactive');
   contactsList.classList.add('footer__contacts-list--deactive');
 
