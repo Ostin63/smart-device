@@ -93,14 +93,16 @@
     }
   }
 
-  document.addEventListener('keydown', onTabPress);
-  headerButton.addEventListener('click', onModalAdd);
-  modalClose.addEventListener('click', onModalClose);
-  modal.addEventListener('click', function (evt) {
+  function onOverlayPress(evt) {
     if (evt.target === evt.currentTarget) {
       onModalClose();
     }
-  });
+  }
+
+  document.addEventListener('keydown', onTabPress);
+  headerButton.addEventListener('click', onModalAdd);
+  modalClose.addEventListener('click', onModalClose);
+  modal.addEventListener('click', onOverlayPress);
   sectionsSite.addEventListener('click', onToggleSections);
   contacts.addEventListener('click', onToggleContacts);
   modalForm.addEventListener('click', onSubmitForm);
