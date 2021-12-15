@@ -82,6 +82,7 @@
   }
 
   @media (max-width: $tablet-width) {
+    max-width: 715px;
     margin: 0 auto 30px;
   }
 }
@@ -176,6 +177,10 @@
     height: auto;
     min-height: 256px;
     display: block;
+
+    @media (max-width: $tablet-width) {
+      object-fit: cover;
+    }
   }
 
   &::after {
